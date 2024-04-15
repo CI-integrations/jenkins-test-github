@@ -8,7 +8,7 @@ pipeline {
 
             ],
             causeString: '',
-            token: 'abc123',
+            token: 'abc123_github',
             tokenCredentialId: '',
             overrideQuietPeriod: true,
             printContributedVariables: true,
