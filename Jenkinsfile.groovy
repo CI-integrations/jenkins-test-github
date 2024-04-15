@@ -63,7 +63,7 @@ pipeline {
                     // only build release/* branches
                     branches: [[name: '**']],
                     extensions: [],
-                    userRemoteConfigs: [[credentialsId: '', url: 'https://gitlab.com/yildirim-dev/jenkins-test-gitlab.git']]]
+                    userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/CI-integrations/jenkins-test-github.git']]]
             }
         }
 
