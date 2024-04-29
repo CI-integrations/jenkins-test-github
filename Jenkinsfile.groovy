@@ -97,13 +97,13 @@ pipeline {
 }
                     """
                     echo "PAYLOAD: $PAYLOAD"
-                    httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON_UTF8', customHeaders: [[maskValue: false, name: 'jenkins-event-type', value: 'workflow-completed']], httpMode: 'POST', ignoreSslErrors: true, requestBody: PAYLOAD, responseHandle: 'NONE', url: 'https://fine-cups-clean.loca.lt/api/deployment/d76bfe3c-53c9-4526-bec8-32ba38d7a830', wrapAsMultipart: false
+                    httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON_UTF8', customHeaders: [[maskValue: false, name: 'jenkins-event-type', value: 'workflow-completed']], httpMode: 'POST', ignoreSslErrors: true, requestBody: PAYLOAD, responseHandle: 'NONE', url: 'https://atlas-webhook-n2.valven.com/api/deployment/9207478a-eac9-4e95-8521-70127ea3ff1b', wrapAsMultipart: false
                 } else {
                     echo "Build triggered by webhook"
                     def POST_CONTENT = env.POST_CONTENT ?: '{ "status": "failed" }'
                     def PAYLOAD = "$POST_CONTENT"
                     echo "PAYLOAD: $PAYLOAD"
-                    httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON_UTF8', customHeaders: [[maskValue: false, name: 'jenkins-event-type', value: 'workflow-completed']], httpMode: 'POST', ignoreSslErrors: true, requestBody: PAYLOAD, responseHandle: 'NONE', url: 'https://fine-cups-clean.loca.lt/api/deployment/d76bfe3c-53c9-4526-bec8-32ba38d7a830', wrapAsMultipart: false
+                    httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON_UTF8', customHeaders: [[maskValue: false, name: 'jenkins-event-type', value: 'workflow-completed']], httpMode: 'POST', ignoreSslErrors: true, requestBody: PAYLOAD, responseHandle: 'NONE', url: 'https://atlas-webhook-n2.valven.com/api/deployment/9207478a-eac9-4e95-8521-70127ea3ff1b', wrapAsMultipart: false
                 }
             }
         }
