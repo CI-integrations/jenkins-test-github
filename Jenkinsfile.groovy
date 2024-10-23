@@ -97,13 +97,13 @@ pipeline {
 }
                     """
                     echo "PAYLOAD: $PAYLOAD"
-                    httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON_UTF8', customHeaders: [[maskValue: false, name: 'jenkins-event-type', value: 'workflow-completed']], httpMode: 'POST', ignoreSslErrors: true, requestBody: PAYLOAD, responseHandle: 'NONE', url: 'https://atlas-webhook-n2.valven.com:11443/api/deployment/454a7def-b290-47e1-ab29-d587b34f7a2d', wrapAsMultipart: false
+                    httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON_UTF8', customHeaders: [[maskValue: false, name: 'jenkins-event-type', value: 'workflow-completed']], httpMode: 'POST', ignoreSslErrors: true, requestBody: PAYLOAD, responseHandle: 'NONE', url: 'https://atlas-webhook-n2.valven.com:11443/api/deployment/25b3f5cd-96cc-4bf3-8a1c-d4f426491154', wrapAsMultipart: false
                 } else {
                     echo "Build triggered by webhook"
                     def POST_CONTENT = env.POST_CONTENT ?: '{ "status": "failed" }'
                     def PAYLOAD = "$POST_CONTENT"
                     echo "PAYLOAD: $PAYLOAD"
-                    httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON_UTF8', customHeaders: [[maskValue: false, name: 'jenkins-event-type', value: 'workflow-completed']], httpMode: 'POST', ignoreSslErrors: true, requestBody: PAYLOAD, responseHandle: 'NONE', url: 'https://atlas-webhook-n2.valven.com:11443/api/deployment/454a7def-b290-47e1-ab29-d587b34f7a2d', wrapAsMultipart: false
+                    httpRequest consoleLogResponseBody: true, contentType: 'APPLICATION_JSON_UTF8', customHeaders: [[maskValue: false, name: 'jenkins-event-type', value: 'workflow-completed']], httpMode: 'POST', ignoreSslErrors: true, requestBody: PAYLOAD, responseHandle: 'NONE', url: 'https://atlas-webhook-n2.valven.com:11443/api/deployment/25b3f5cd-96cc-4bf3-8a1c-d4f426491154', wrapAsMultipart: false
                 }
             }
         }
