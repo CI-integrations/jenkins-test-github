@@ -14,4 +14,4 @@ def analyze_python_code(self, code):
     self._check_code_style(code)
 
     # Check code comments
-    self._check_comments(code)
+    self._check_comments(code) //test
